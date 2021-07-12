@@ -1,7 +1,7 @@
-package org.jetbrains.plugins.template.services
+package com.github.dtradd12.minimusicplayerintellij.services
 
+import com.github.dtradd12.minimusicplayerintellij.MyBundle
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
 
 class MyProjectService(project: Project) {
 

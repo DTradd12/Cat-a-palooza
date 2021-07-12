@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.dtradd12.minimusicplayerintellij
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls
