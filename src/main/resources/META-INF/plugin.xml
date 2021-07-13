@@ -1,6 +1,12 @@
 <idea-plugin>
+<<<<<<< HEAD
     <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
     <id>com.miniplayer.toolWindow</id>
+=======
+    <id>com.github.dtradd12.minimusicplayerintellij</id>
+    <name>MiniMusicPlayerIntellij</name>
+    <vendor>dtradd12</vendor>
+>>>>>>> e1c86e8c8dbbbf27fd94316d9bd7450de87601ba
 
     <!-- Text to display as name on Preferences/Settings | Plugin page -->
     <name>Mini Music Player</name>
@@ -19,8 +25,19 @@
     <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
 
     <extensions defaultExtensionNs="com.intellij">
+<<<<<<< HEAD
         <toolWindow id="Mini Music Player" secondary="true" icon="AllIcons.General.Modified" anchor="right"
                     factoryClass="com.miniplayer.toolWindow.MiniMusicPlayerWindowFactory"/>
     </extensions>
 
+=======
+        <applicationService serviceImplementation="com.github.dtradd12.minimusicplayerintellij.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.github.dtradd12.minimusicplayerintellij.services.MyProjectService"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.github.dtradd12.minimusicplayerintellij.listeners.MyProjectManagerListener"
+                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
+>>>>>>> e1c86e8c8dbbbf27fd94316d9bd7450de87601ba
 </idea-plugin>
