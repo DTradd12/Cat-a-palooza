@@ -1,19 +1,26 @@
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>Template</name>
-    <vendor>JetBrains</vendor>
+    <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
+    <id>com.miniplayer.toolWindow</id>
 
-    <!-- Product and plugin compatibility requirements -->
-    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <!-- Text to display as name on Preferences/Settings | Plugin page -->
+    <name>Mini Music Player</name>
+
+    <!-- Indicate this plugin can be loaded in all IntelliJ Platform-based products. -->
     <depends>com.intellij.modules.platform</depends>
 
+    <!-- Text to display as description on Preferences/Settings | Plugin page -->
+    <description>
+        <![CDATA[
+        Plugin to add Spotify Music support to all Jetbrains IDE. Control your spotify from within your IDE!
+        ]]>
+    </description>
+
+    <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+    <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService"/>
-        <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService"/>
+        <toolWindow id="Mini Music Player" secondary="true" icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.miniplayer.toolWindow.MiniMusicPlayerWindowFactory"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
